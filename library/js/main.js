@@ -116,9 +116,10 @@ $(document).ready(function() {
   function checkSlide() {
     infoBoxes.forEach(infoBox => {
       // half way through the image
-      const slideInAt = window.scrollY + window.innerHeight - infoBox.height;
+      const slideInAt =
+        window.scrollY + window.innerHeight - infoBox.offsetHeight;
       // bottom of the image
-      const imageBottom = infoBox.offsetTop + infoBox.height;
+      const imageBottom = infoBox.offsetTop + infoBox.offsetHeight;
       const isHalfShown = slideInAt > infoBox.offsetTop;
       const isNotScrolledPast = window.scrollY < imageBottom;
       console.log(imageBottom, isHalfShown, isNotScrolledPast, slideInAt);
