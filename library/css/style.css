@@ -1,0 +1,729 @@
+/*! Made with Bones: http://themble.com/bones :) */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
+
+******************************************************************/
+/*********************
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+/* line 60, ../scss/style.scss */
+body {
+  margin: 0px !important;
+  overflow: hidden !important;
+  background: black;
+}
+
+/* line 68, ../scss/style.scss */
+header#primary-nav .inner-wrap {
+  display: flex;
+  max-width: 95vw;
+  margin: 0 auto;
+}
+/* line 72, ../scss/style.scss */
+header#primary-nav .inner-wrap .logo-wrap {
+  width: 100%;
+}
+/* line 76, ../scss/style.scss */
+header#primary-nav .inner-wrap .links-wrap {
+  margin-right: -10px;
+}
+/* line 78, ../scss/style.scss */
+header#primary-nav .inner-wrap .links-wrap nav {
+  text-align: left;
+}
+/* line 80, ../scss/style.scss */
+header#primary-nav .inner-wrap .links-wrap nav ul {
+  list-style: none;
+}
+@media (min-width: 992px) {
+  /* line 82, ../scss/style.scss */
+  header#primary-nav .inner-wrap .links-wrap nav ul a {
+    font-size: 20px;
+    padding-right: 5px;
+    text-decoration: none;
+    color: black;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+}
+/* line 91, ../scss/style.scss */
+header#primary-nav .inner-wrap .links-wrap nav ul a:hover {
+  text-decoration: underline;
+}
+
+/* line 100, ../scss/style.scss */
+.main-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* line 107, ../scss/style.scss */
+.menu-inner {
+  margin-left: -100%;
+  background: #f9cbcc;
+  position: absolute;
+  text-align: center;
+  height: 100vh;
+  padding: 50px 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0.9;
+  -moz-transition: margin-left 1s;
+  -o-transition: margin-left 1s;
+  -webkit-transition: margin-left 1s;
+  transition: margin-left 1s;
+}
+/* line 118, ../scss/style.scss */
+.menu-inner a {
+  color: black;
+  font-family: "Staatliches", cursive;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* line 124, ../scss/style.scss */
+.menu-inner .nav > li > a:focus,
+.menu-inner .nav > li > a:hover {
+  transform: scale(1.1);
+  background-color: transparent;
+}
+
+/* line 131, ../scss/style.scss */
+.active-menu-inner {
+  margin-left: 0px;
+  background: black;
+  opacity: 1;
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 0px;
+  z-index: 1000;
+}
+@media (min-width: 992px) {
+  /* line 131, ../scss/style.scss */
+  .active-menu-inner {
+    margin-left: 0px;
+    background: black;
+    opacity: 1;
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 50px 0px;
+    z-index: 1000;
+  }
+}
+/* line 156, ../scss/style.scss */
+.active-menu-inner a {
+  font-size: 40px;
+}
+@media (min-width: 992px) {
+  /* line 156, ../scss/style.scss */
+  .active-menu-inner a {
+    color: white;
+    font-family: "Staatliches", cursive;
+    font-size: 180px;
+    font-weight: bold;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+    margin-bottom: -100px;
+    margin-top: -75px;
+  }
+}
+/* line 168, ../scss/style.scss */
+.active-menu-inner .nav > li > a:focus,
+.active-menu-inner .nav > li > a:hover {
+  transform: scale(1.1);
+}
+
+/* line 174, ../scss/style.scss */
+#menu-sidebar-menu {
+  max-width: 50%;
+}
+
+/* line 178, ../scss/style.scss */
+.menu-button {
+  float: right;
+  margin-top: 10px;
+  font-size: 20px;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* line 185, ../scss/style.scss */
+.menu-button:hover {
+  color: white;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+/* line 191, ../scss/style.scss */
+h1 {
+  font-size: 30px;
+  font-family: "Staatliches", cursive;
+  color: white;
+  text-align: center;
+}
+
+/* line 197, ../scss/style.scss */
+p {
+  font-family: "Staatliches", cursive;
+  text-align: center;
+  color: white;
+}
+
+/* line 202, ../scss/style.scss */
+a {
+  font-family: "Staatliches", cursive;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* line 209, ../scss/style.scss */
+#logo {
+  font-size: 60px;
+}
+
+/* line 213, ../scss/style.scss */
+.home {
+  min-height: 100%;
+}
+
+/* line 217, ../scss/style.scss */
+.desktop-logo {
+  margin-top: 5%;
+}
+
+/* line 221, ../scss/style.scss */
+.work-title {
+  color: white;
+  font-size: 90px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* line 229, ../scss/style.scss */
+#player1 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 237, ../scss/style.scss */
+.video-container {
+  max-width: 100%;
+}
+
+/* line 241, ../scss/style.scss */
+.enter-btn-wrap {
+  z-index: 11;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  min-height: 900px;
+  margin-top: -11%;
+}
+
+/* line 249, ../scss/style.scss */
+.enter-btn {
+  margin-top: 22%;
+}
+/* line 251, ../scss/style.scss */
+.enter-btn a {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-size: 35px;
+  font-family: "Staatliches", cursive;
+}
+
+/* line 260, ../scss/style.scss */
+.site-container {
+  height: 100%;
+}
+
+/* line 264, ../scss/style.scss */
+.video-overlay {
+  width: 100%;
+  min-height: 900px;
+  z-index: 90;
+}
+
+/* MODAL */
+/* line 272, ../scss/style.scss */
+.modal-fullscreen {
+  background: transparent;
+  top: 100px;
+}
+
+/* line 276, ../scss/style.scss */
+.modal-fullscreen .modal-content {
+  background: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 282, ../scss/style.scss */
+.modal-backdrop.modal-backdrop-fullscreen {
+  background: #ffffff;
+  top: 100px;
+}
+
+/* line 286, ../scss/style.scss */
+.modal-backdrop.modal-backdrop-fullscreen.in {
+  opacity: 0.9;
+  filter: alpha(opacity=9);
+}
+
+/* line 290, ../scss/style.scss */
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: 1;
+  background: #ffffff;
+  margin-top: 10px;
+}
+
+/* line 297, ../scss/style.scss */
+.modal-backdrop {
+  margin-top: 80px;
+}
+
+/* line 301, ../scss/style.scss */
+.mobile-nav {
+  text-align: center;
+}
+/* line 303, ../scss/style.scss */
+.mobile-nav li {
+  margin-bottom: 10px;
+}
+/* line 306, ../scss/style.scss */
+.mobile-nav a {
+  font-size: 35px;
+}
+
+/* .modal-fullscreen size: we use Bootstrap media query breakpoints */
+/* line 313, ../scss/style.scss */
+.modal-fullscreen .modal-dialog {
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  /* line 320, ../scss/style.scss */
+  .modal-fullscreen .modal-dialog {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 325, ../scss/style.scss */
+  .modal-fullscreen .modal-dialog {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 330, ../scss/style.scss */
+  .modal-fullscreen .modal-dialog {
+    width: 1170px;
+  }
+}
+/* MEDIA QUERIES */
+@media screen and (min-width: 992px) {
+  /* line 338, ../scss/style.scss */
+  .hamburger {
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 18px;
+    overflow: visible;
+  }
+}
+/* line 355, ../scss/style.scss */
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+/* line 359, ../scss/style.scss */
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+/* line 366, ../scss/style.scss */
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+/* line 371, ../scss/style.scss */
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+/* line 383, ../scss/style.scss */
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+/* line 388, ../scss/style.scss */
+.hamburger-inner::before {
+  top: -10px;
+}
+
+/* line 391, ../scss/style.scss */
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/* Collapse */
+/* line 395, ../scss/style.scss */
+button.hamburger.hamburger--collapse {
+  float: right;
+  margin: 25px 15px;
+  border: 0px;
+  background: transparent;
+}
+@media (min-width: 992px) {
+  /* line 395, ../scss/style.scss */
+  button.hamburger.hamburger--collapse {
+    display: block;
+  }
+}
+
+/* line 404, ../scss/style.scss */
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* line 411, ../scss/style.scss */
+.hamburger--collapse .hamburger-inner::after {
+  top: -20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+
+/* line 416, ../scss/style.scss */
+.hamburger--collapse .hamburger-inner::before {
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* line 421, ../scss/style.scss */
+.hamburger--collapse.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 426, ../scss/style.scss */
+.hamburger--collapse.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+
+/* line 432, ../scss/style.scss */
+.hamburger--collapse.is-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(-90deg);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/*# sourceMappingURL=styles.css.map */
+/* line 441, ../scss/style.scss */
+.look-inside-button {
+  text-align: center;
+  border: solid 2px black;
+  padding: 3px;
+  font-size: 16px;
+  max-width: 50%;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* line 453, ../scss/style.scss */
+.work-container {
+  width: 100%;
+}
+/* line 455, ../scss/style.scss */
+.work-container .work-body {
+  width: 90%;
+}
+/* line 457, ../scss/style.scss */
+.work-container .work-body .project-title {
+  width: 100%;
+  margin-bottom: 50px;
+}
+/* line 460, ../scss/style.scss */
+.work-container .work-body .project-title .project-title-h1 {
+  font-size: 40px;
+  font-family: "Staatliches", cursive;
+  color: white;
+  text-align: left;
+  margin-left: 15px;
+}
+/* line 468, ../scss/style.scss */
+.work-container .work-body section {
+  width: 100%;
+}
+/* line 470, ../scss/style.scss */
+.work-container .work-body section .project-container {
+  width: 100%;
+  margin-bottom: 115px;
+}
+/* line 473, ../scss/style.scss */
+.work-container .work-body section .project-container .info-display {
+  width: 80%;
+  text-align: center;
+  float: right;
+}
+/* line 481, ../scss/style.scss */
+.work-container .work-sidebar {
+  width: 10%;
+  position: fixed;
+  top: 15%;
+  right: 24px;
+  margin-right: -25px;
+  margin-top: 25px;
+}
+
+/* line 491, ../scss/style.scss */
+section {
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  padding-top: 50px;
+}
+
+/* line 496, ../scss/style.scss */
+section:focus {
+  outline: none;
+  padding-top: 50px;
+}
+
+/* line 501, ../scss/style.scss */
+.sidebar-icon {
+  margin-bottom: 25px;
+}
+
+/* line 505, ../scss/style.scss */
+.sidebar-img {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+/* line 514, ../scss/style.scss */
+.sidebar-img:hover {
+  -webkit-filter: grayscale(0%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+/* line 520, ../scss/style.scss */
+.sidebar-img:visited {
+  -webkit-filter: grayscale(0%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
+/* line 525, ../scss/style.scss */
+.sidebar-menu {
+  list-style: none;
+}
+
+/* line 529, ../scss/style.scss */
+.page-template-page-work {
+  overflow: scroll !important;
+}
+/* line 531, ../scss/style.scss */
+.page-template-page-work h4 {
+  color: white;
+  text-align: left;
+  font-family: "Staatliches", cursive;
+}
+/* line 536, ../scss/style.scss */
+.page-template-page-work p {
+  color: white;
+  text-align: left;
+}
+
+/* line 542, ../scss/style.scss */
+.info-box {
+  width: 20%;
+  background: lightgrey;
+  position: relative;
+  z-index: 100;
+  margin-top: -15px;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  transform: translateX(-30%) scale(0.95);
+}
+
+/* line 552, ../scss/style.scss */
+.active {
+  transform: translateX(20%) scale(1);
+}
+
+/* line 557, ../scss/style.scss */
+.copyright {
+  text-align: center !important;
+}
+
+/* line 564, ../scss/style.scss */
+.slick-slide img {
+  max-width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 571, ../scss/style.scss */
+.shots-img-2 {
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 577, ../scss/style.scss */
+.page-template-page-shots {
+  overflow: scroll !important;
+}
+/* line 579, ../scss/style.scss */
+.page-template-page-shots p {
+  color: white;
+  text-align: left !important;
+}
+/* line 583, ../scss/style.scss */
+.page-template-page-shots a {
+  color: white;
+}
+/* line 586, ../scss/style.scss */
+.page-template-page-shots h1 {
+  color: white;
+}
+
+/* line 591, ../scss/style.scss */
+.slick-next {
+  right: 25px;
+  color: white;
+}
+
+/* line 596, ../scss/style.scss */
+.slick-prev {
+  left: 25px;
+  color: white;
+}
+
+/* line 601, ../scss/style.scss */
+.slick-dotted.slick-slider {
+  margin-bottom: 20%;
+}
+
+/* line 605, ../scss/style.scss */
+.shots-container {
+  margin-top: 100px;
+}
+
+/* line 611, ../scss/style.scss */
+.contact-img {
+  max-width: 100%;
+}
+
+/* line 615, ../scss/style.scss */
+.page-template-page-contact {
+  overflow: scroll !important;
+}
+/* line 617, ../scss/style.scss */
+.page-template-page-contact .copyright {
+  display: none;
+}
+
+/* line 622, ../scss/style.scss */
+.social-links {
+  list-style: none;
+  padding: 0px;
+}
+/* line 625, ../scss/style.scss */
+.social-links img {
+  max-width: 10%;
+  display: inline;
+}
+/* line 629, ../scss/style.scss */
+.social-links li {
+  display: inline;
+}
+
+/* line 634, ../scss/style.scss */
+.info {
+  text-align: left;
+  font-size: 35px;
+}
+
+/* line 639, ../scss/style.scss */
+.social-img {
+  margin-right: 25px;
+}
